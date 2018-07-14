@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+
+	<!-- Define variable -->
+	<property name="USER_HOME" value="/media/quanchu/09480F9A09480F9A/workspace/ThucTap20173/BT2_Tool/Bai1" />
+
+	<!-- Send debug messages to System.out -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- By default, encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} %line %method - %msg%n</pattern>
+			<outputPatternAsHeader>true</outputPatternAsHeader>
+		</encoder>
+	</appender>
+	
+	<!-- Send debug messages to a file at "/home/quanchu/Log/jcg.log" -->
+	<appender name="sizeBaseTriggerFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${USER_HOME}/Log/log.txt</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+		</encoder>
+ 
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>${USER_HOME}/Log/log_%i.txt</FileNamePattern>
+			<MinIndex>1</MinIndex>
+			<MaxIndex>10</MaxIndex>
+		</rollingPolicy>
+ 
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>1KB</MaxFileSize>
+		</triggeringPolicy>
+	</appender>
+
+
+	<appender name="timeBaseFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>logFile.log</file>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      	<!-- daily rollover -->
+      		<fileNamePattern>logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+      		<!-- keep 30 days' worth of history capped at 2KB total size -->
+      		<maxHistory>30</maxHistory>
+      		<totalSizeCap>2KB</totalSizeCap>
+		</rollingPolicy>
+
+    	<encoder>
+      		<pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+    	</encoder>
+  	</appender>
+  
+  	<logger name="tool_bt1" level="Debug" additivity="true">
+            <appender-ref ref="sizeBaseTriggerFile" />
+	</logger>
+
+	<!-- By default, the level of the root level is set to DEBUG -->
+	<root level="Debug">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
