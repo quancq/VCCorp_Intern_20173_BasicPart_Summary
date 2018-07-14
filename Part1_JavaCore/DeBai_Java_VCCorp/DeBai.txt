@@ -1,0 +1,19 @@
+1. Sử dụng Set trong collection để tìm tập giao và tập hợp giữa 2 tập hợp (tự tạo ra 2 tập hợp, mỗi tập hợp 2.000.000 một số Integer ngẫu nhiên, không giống nhau. 2 tập hợp phải có trên 5% số phần tử giao nhau). Hãy tính tổng thời gian thực hiện tìm cả tập giao và tập hợp và tìm cách tối ưu nhất để thời gian tính toán này nhỏ nhất có thể.
+2. Cho một văn bản như trong file “input 2.zip”. Hãy đọc file và đếm số lần xuất hiện của từng từ (mỗi từ phân biệt nhau bằng dấu cách) rồi ghi vào file output.txt.
+3. Lập trình đếm từ đa luồng cho bài 2 với dữ liệu vào là một folder chứa nhiều file text được nén trong file “input 3.zip”. Hãy xử lý song song các file và tìm top 10 từ xuất hiện nhiều nhất, và top 10 từ xuất hiện ít nhất của toàn bộ dữ liệu có trong folder. Lưu ý, chỉ được chạy tối đa 6 luồng cùng lúc.
+4. Tạo ra một class Point với 2 tọa độ nguyên x và y. Sinh ngẫu nhiên 30.000 point khác nhau, nằm trong 3 Set. Set thứ nhất có size 8.000, chứa các điểm có cách điểm A(800, 800) một độ dài không quá 400 đơn vị, Set tiếp theo có size = 10.000 chứa các điểm cách điểm B(4000,800) không quá 500 đơn vị, và 12.000 điểm cuối cùng cách điểm C(2400, 2400) không quá 600 đơn vị. Trộn ngẫu nhiên 30.000 điểm này, sau đó ghi ra file output4.txt. Lưu ý: sử dụng hàm Set< Point >.contains để kiểm tra một điểm đã tồn tại trong tập hợp đó hay chưa.
+5. Trong file Maze.java có chứa bản đồ mê cung, hãy implement hàm solve dựa trên một phương pháp tìm đường nào đó. Hãy chọn các phương pháp có độ phức tạp (số bước thực hiện) càng nhỏ càng tốt và đánh dấu đường đi bằng cách thay số 0 bằng số 2 trên ma trận mê cung. Lưu ý, bài tập này có xét cách viết code, comment, viết java doc, đặt tên biến/hàm, tổ chức project …
+
+6. Cho url sau hãy trích những thông tin:
+ https://www.google.com.vn/search?q=string+java+practice&rlz=1C1CHZL_viVN741VN741&oq=string&aqs=chrome.2.69i57j69i60j69i59j69i60.2342j0j1&sourceid=chrome&ie=UTF-8
+ 
+ 6.1. Domain name của url này
+ 6.2. Các query param trong url và giá trị của chúng cho vào Hashmap như q,rlz, aqs, sourceid,ie
+ 6.3. Thay đổi giá trị các query param trong Hashmap và build lại thành một url mới.
+
+7. Tạo ra một Interface VanTai, có một phương thức duy nhất "dichuyen".
+
+Tạo ra 3 lớp cài đặt từ interface VanTai: XeTai (Hàm di chuyển in ra dòng "Di chuyển bằng dầu và máy kéo" , Oto ("Di chuyển bằng xăng và động cơ trong), Xe đạp ("Di chuyển bằng sức người")
+ + Mỗi lớp tạo ra 3 instance khác nhau
+ + Add 9 đối tượng vào chung một ArrayList
+ + Foreach qua từng đối tượng trong ArrayList và gọi đối tượng di chuyển của từng đối tượng đó.
