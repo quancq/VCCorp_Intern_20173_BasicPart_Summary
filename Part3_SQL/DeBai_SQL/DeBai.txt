@@ -1,0 +1,27 @@
+Import employees database vào mysql trên local. Có sơ đồ CSDL kèm theo.
+
+1. Viết câu truy vấn SQL để liệt kê danh sách:
+ 1.1. Liệt kê 10 nhân viên bắt đầu làm việc từ năm 1999
+ 1.2. Đếm số nhân viên nữ có ngày sinh từ năm 1950 đến năm 1960 mà last_name có 3 chữ cái đầu là “Mon”
+ 1.3. Lấy ra các nội dung sau của nhân viên có id = 10005: first_name, last_name, hire_date, salary_total. Trong đó salary_total là tổng lương của nhân viên 10005 trong toàn bộ thời gian anh ta giữ chức vụ “Staff” – trong bảng titles.
+ 1.4. Tìm xem người quản lý có tên là Margareta Markovitch trong thời gian giữ chức quản lý thì đã quản lý bao nhiêu nhân viên
+ 1.5. Tìm xem tổng lương phải trả của mỗi phòng ban trong khoản thời gian from_date = 1988-06-25 đến to_date 1989-06-25 (from_date, to_date từ bảng salaries) là bao nhiêu và lọc những phòng ban trả tổng lương cao hơn 3 triệu$.
+2. Viết từng nhóm câu truy vấn để cập nhật những nội dung sau:
+ 2.1. Thăng chức cho nhân viên 10002 từ “Staff” lên “Senior Staff”. Lưu ý, phải dừng chức vụ hiện tại mới được chuyển chức vụ mới.
+ 2.2. Hãy xóa phòng ban Production cùng toàn bộ nhân viên của phòng này, cùng với tất cả các dữ liệu có liên quan.
+ 2.3. Thêm phòng ban mới “Bigdata & ML” và bổ nhiệm nhân viên có ID = 10173 lên làm quản lý.
+3. Viết một Stored Procedure với input là tên nhân viên. Cần trả lại 2 result - kết quả :
+ 3.1. Kết quả 1: Lấy ra id, full name, giới tính, title (hay  chức vụ), tên phòng ban
+ 3.2. Kết quả 2: Tính tổng lương của từng người có tên đó trong khoảng thời gian từ lúc nhận lương đến thời điểm hiện tại
+4. Viết một Store Procedure để thuyên chuyển phòng ban cho một nhân viên nào đó, với chức vụ mới (không chuyển lên làm quản lý). Đồng thời trả lại một kết quả bao gồm:
+ ra id, full name, giới tính, title (hay  chức vụ), tên phòng ban
+5. Viết một hàm trong java và sử dụng preparedstatement để gọi Store trong bài 4. Lưu ý: Connection, statement, result tạo ra cần được đóng lại trong finally. Params của hàm bao gồm: 
+- mã nhân viên
+- mã phòng ban cần chuyển đến
+- chức vụ mới
+6. Tạo một transaction trong code java, thực hiện lần lượt nhóm các lệnh trong bài 2.1. Nếu một trong các lệnh bị lỗi thì rollback lại transaction, tránh trường hợp không đồng bộ dữ liệu.
+7. Chỉ mục (index) trong SQL là gì? Khi nào nên đánh index và khi nào không?
+
+những bài này đều làm bằng câu truy vấn trên tool
+
+chỉ riêng bài 5-6 mới làm bằng java thôi nhé
