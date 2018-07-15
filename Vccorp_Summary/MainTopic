@@ -1,0 +1,26 @@
+1. Java
+1.1. Concurrency
+1.2. Collection
+1.3. Exception
+2. Tool
+2.1. Maven
+2.2. Thư viện logback
+2.3. Docker
+2.4. Debug Eclipse
+2.5. Guava cache
+2.6. Git - Github
+2.7. SSH
+2.8. Linux Command
+3. SQL
+3.1. Các dạng chuẩn NF
+3.2. Một số chức năng (Join, Store Procedure, View, Trigger, Transaction)
+3.3. Index
+
+================
+Các câu hỏi chính cần trả lời
+1. Khái niệm / Định nghĩa
+2. Tại sao cần sử dụng (nêu vấn đề của các giải pháp khác)
+3. Mục đích / Trường hợp sử dụng
+4. Ưu điểm / Nhược điểm, so sánh
+5. Tổng quan kiến trúc, các chức năng chính
+6. Tài liệu tham khảo
