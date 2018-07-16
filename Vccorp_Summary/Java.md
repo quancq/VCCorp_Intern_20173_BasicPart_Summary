@@ -124,13 +124,29 @@ int newValue = atomicInt.incrementAndGet();
 
 # 2. Collection
 
+## Toàn cảnh sơ đồ phân cấp 1 số collection quan trọng
+![Collection Overview](./Images/collections-framework-overview.png) 
+
+
 ## Các collection quan trọng
 * ArrayList, LinkedList, Stack
 * PriorityQueue
 * HashMap, TreeMap, ConcurrentHashMap
 * HashSet, TreeSet
 
-## Một số vấn đề
+## Một cách để lựa chọn collection phù hợp
+![Chọn collection phù hợp ](./Images/How-to-choose-right-collection.png)
+
+## Bảng tổng kết một số đặc điểm của các collection
+![](./Images/common_collection_in_java_latte.png)
+====================
+![](./Images/most_talked_collection_in_java_latte.png) 
+
+
+## Tổng kết độ phức tạp của 1 số collection
+![Collection C](./Images/CollectionComplexity.png)
+
+## Một số vấn đề cần hiểu
 * Trường hợp sử dụng, đặc điểm, độ phức tạp của một số thao tác chính
 * Tìm hiểu Comparator, Comparable, HashCode, Equal
 * Các Collection an toàn khi sử dụng đồng thời bởi nhiều thread
