@@ -116,11 +116,28 @@ int newValue = atomicInt.incrementAndGet();
 
 ### 1.4.6. ConcurrentMap
 
-## 1.5. Tài liệu tham khảo
+## Tài liệu tham khảo
 * [Java concurrency](http://www.vogella.com/tutorials/JavaConcurrency/article.html) 
 * [Java 8 Concurrency Tutorial: Threads and Executors (Part 1)](http://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-examples/) 
 * [Java 8 Concurrency Tutorial: Synchronization and Locks (Part 2)](http://winterbe.com/posts/2015/04/30/java8-concurrency-tutorial-synchronized-locks-examples/) 
 * [Java 8 Concurrency Tutorial: Atomic Variables and ConcurrentMap (Part 3)](http://winterbe.com/posts/2015/05/22/java8-concurrency-tutorial-atomic-concurrent-map-examples/) 
 
-# 2. Exception
-# 3. Collection
+# 2. Collection
+
+## Các collection quan trọng
+* ArrayList, LinkedList, Stack
+* PriorityQueue
+* HashMap, TreeMap, ConcurrentHashMap
+* HashSet, TreeSet
+
+## Một số vấn đề
+* Trường hợp sử dụng, đặc điểm, độ phức tạp của một số thao tác chính
+* Tìm hiểu Comparator, Comparable, HashCode, Equal
+* Các Collection an toàn khi sử dụng đồng thời bởi nhiều thread
+
+## Tài liệu tham khảo
+* [Don't know which map/collection to use?](http://java-latte.blogspot.com/2013/06/dont-know-which-mapcollection-to-use.html) 
+* [Collections in Java – Tutorial](https://www.journaldev.com/1260/collections-in-java-tutorial) 
+* [Java Collections – Performance (Time Complexity)](http://infotechgems.blogspot.com/2011/11/java-collections-performance-time.html) 
+* [Collections](http://cs.lmu.edu/~ray/notes/collections/) 
+* [Java Collections Tutorial](http://tutorials.jenkov.com/java-collections/index.html) 
